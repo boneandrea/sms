@@ -4,8 +4,8 @@ Send and receive SMS using usb gsm modem (SORACOM AK-020)
 
 # How
 
-bundle exec ruby recv.rb
-bundle exec ruby send.rb よきかな
+bundle exec ruby recv.rb  
+bundle exec ruby send.rb 本日は海老天なり
 
 ```
 sudo wvdialconf
