@@ -1,0 +1,8 @@
+.env
+*.lock
+
+#
+vendor/
+
+# Yarn Doc
+doc/
