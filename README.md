@@ -4,11 +4,11 @@ Send and receive SMS using usb gsm modem (SORACOM AK-020)
 
 # Usage
 
-Setup.
+Setup:
 ```bash
 echo "phone_number='your_phone_number'" > .env
 ```
-
+Run:
 ```bash
 bundle install  
 bundle exec ruby recv.rb  
