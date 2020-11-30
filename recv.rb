@@ -73,4 +73,4 @@ end
 
 number_mails = recv if $PROGRAM_NAME == __FILE__
 puts "found #{number_mails} mail(s)"
-remove 2 if (ARGV[0] == 'delete') && ($PROGRAM_NAME == __FILE__)
+remove 1 if (ARGV[0] == 'delete') && ($PROGRAM_NAME == __FILE__)

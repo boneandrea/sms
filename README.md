@@ -16,9 +16,14 @@ bundle exec ruby send.rb 本日は海老天なり
 ```
 # How
 
+.envに`device=/dev/ttyUSB1`などと設定する。  
+デバイス名は`wvdialconf`で取得する。
+
 ```
-sudo wvdialconf
-cu -l /dev/ttyUSB1
+sudo wvdialconf # 使えるモデム /dev/ttyUSB* を発見してもらう
+cu -l /dev/ttyUSB1 # ttyUSB1が見つかったとする
+echo "device='/dev/ttyUSB1'" > .env
+
 systemctl stop ModemManager
 
 cu -l /dev/ttyUSB1

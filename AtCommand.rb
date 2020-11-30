@@ -1,6 +1,8 @@
 # frozen_string_literal: false
 
 require 'serialport'
+require 'dotenv'
+Dotenv.load
 
 # ATCommand
 class AtCommand
@@ -9,7 +11,7 @@ class AtCommand
   end
 
   def initialize
-    @sp = SerialPort.new('/dev/ttyUSB1')
+    @sp = SerialPort.new(ENV['device'])
     @sp.set_modem_params(115_200, 8, 1, 0)
     ObjectSpace.define_finalizer(self, self.class.fin_proc)
   rescue Errno::EBUSY => e
