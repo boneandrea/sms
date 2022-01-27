@@ -8,9 +8,11 @@ Setup:
 ```bash
 echo "phone_number='your_phone_number'" > .env
 ```
+https://users.soracom.io/ja-jp/guides/devices/general/raspberry-pi-dongle/
+
 Run:
 ```bash
-bundle install  
+bundle install --path vendor/bundle
 bundle exec ruby recv.rb  
 bundle exec ruby send.rb 本日は海老天なり
 ```
@@ -37,3 +39,8 @@ sudo usb_modeswitch -v 0x15eb -p 0x7d0e --reset-usb
 以下をやっている
 - rubocop
 - generate yardoc
+
+
+# 関連URL
+
+- https://qiita.com/miiiiiiika/items/0284123d270ef90a4105
